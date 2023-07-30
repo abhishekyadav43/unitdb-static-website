@@ -67,12 +67,28 @@
                             <div class="container-sm">
                                 <h1 class="hero-title h2-mobile mt-0 is-revealing">Measure all that matters</h1>
                                 <p class="hero-paragraph is-revealing">UnitsDB helps you to define, measure and visualise metrics that are important to your business.</p>
-                                <div class="hero-form newsletter-form field field-grouped is-revealing">
+                                <div id="interest-form" class="newsletter-form field field-grouped is-revealing">
                                     <div class="control control-expanded">
-                                        <input class="input" type="email" name="email" placeholder="Your best email&hellip;">
+                                        <input class="input" type="name" name="name" id="name" placeholder="Name&hellip;">
+                                    </div>
+                                    <div class="control control-expanded">
+                                        <input class="input" type="email" name="email" id="email" placeholder="Email&hellip;">
                                     </div>
                                     <div class="control">
-                                        <a class="button button-primary button-block button-shadow" href="#">Get early access</a>
+                                        <a id="submission-button" class="button button-primary button-block button-shadow" href="#" onclick="onFormSubmit();">Get early access</a>
+                                    </div>
+                                </div>
+                                <!-- Submission response-->
+                                <div id="submission-response" class="hack-container content">
+                                    <!-- Sucess-->
+                                    <div id="submission-response-sucess" class="hack-form-wrapper w-form">
+                                        <div class="hack-form-success-message w-form-done" tabindex="-1" role="region" aria-label="Get-early-access success" style="display: block;">
+                                            <div>Thank you! Your interest has been received!</div>
+                                        </div>
+                                    </div>
+                                    <!-- failure -->
+                                    <div id="submission-response-failure" class="w-form-fail" tabindex="-1" role="region" aria-label="Get-early-access failure">
+                                        <div>Oops! Something went wrong while submitting.</div>
                                     </div>
                                 </div>
                             </div>
